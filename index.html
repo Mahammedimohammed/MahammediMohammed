@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mohammed Mahammedi — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#1f8ef1; --muted:#94a3b8; --glass:rgba(255,255,255,0.04);
+      --radius:12px; --maxw:1000px; --gap:18px; font-family:Inter,system-ui,Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071029 0%, #07131b 100%);color:#e6eef8}
+    .wrap{max-width:var(--maxw);margin:36px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:16px;box-shadow:0 8px 30px rgba(2,6,23,0.7)}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:110px;height:110px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#5ad1ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021024;font-size:28px}
+    h1{margin:0;font-size:24px}
+    .subtitle{color:var(--muted);margin-top:6px}
+    .meta{margin-left:auto;text-align:right}
+    .cta{margin-top:12px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#021024;font-weight:600;text-decoration:none}
+
+    main{display:grid;grid-template-columns:1fr 360px;gap:var(--gap);margin-top:22px}
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:inset 0 1px 0 rgba(255,255,255,0.02)}
+    .section-title{font-size:14px;color:var(--muted);margin-bottom:12px}
+
+    .about p{margin:0 0 12px 0;line-height:1.5;color:#dbe9fb}
+    .list{display:flex;flex-direction:column;gap:10px}
+    .edu-item{padding:10px;border-radius:10px;background:var(--glass);display:flex;justify-content:space-between;align-items:center}
+    .edu-item .left{max-width:70%}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.03);font-size:13px;color:var(--muted)}
+
+    .projects .proj{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));margin-bottom:12px}
+    .proj h4{margin:0 0 6px 0}
+    .proj p{margin:0;color:var(--muted);font-size:14px}
+
+    aside .contact-list{display:flex;flex-direction:column;gap:10px}
+    .contact-item{display:flex;gap:10px;align-items:center}
+    .small{font-size:13px;color:var(--muted)}
+
+    footer{margin-top:22px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:900px){
+      main{grid-template-columns:1fr}
+      .meta{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar">MM</div>
+      <div>
+        <h1>Dr. (Candidat) Mohammed Mahammedi</h1>
+        <div class="subtitle">Ingénieur d'État en foresterie · Magister en biologie · Master en Agro‑pastoralisme · Doctorant en biologie</div>
+        <div class="cta">
+          <a class="btn" href="#contact">Contact & CV</a>
+          <a class="tag" style="margin-left:10px;text-decoration:none;color:var(--muted);background:transparent">GitHub: github.com/votre‑compte</a>
+        </div>
+      </div>
+      <div class="meta small">
+        <div><strong>Spécialités</strong></div>
+        <div class="small">Écologie forestière · Phytosociométrie · Biodiversité · Zones humides</div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="card about">
+          <div class="section-title">À propos</div>
+          <p>Je suis ingénieur d'état en foresterie, diplômé en biologie et agro‑pastoralisme, actuellement doctorant en biologie. Je travaille sur l'étude des peuplements de pin d'Alep, la valorisation du retam, la phytosociométrie de la végétation steppique et la biodiversité des zones humides.</p>
+          <p>Mon approche combine relevés de terrain rigoureux, analyses statistiques et méthodes de valorisation écologique pour traduire les résultats scientifiques en recommandations opérationnelles.</p>
+
+          <div style="margin-top:12px" class="section-title">Domaines de recherche</div>
+          <div class="tags">
+            <span class="tag">Peuplements de pin d'Alep</span>
+            <span class="tag">Valorisation du retam</span>
+            <span class="tag">Phytosociométrie</span>
+            <span class="tag">Végétation steppique</span>
+            <span class="tag">Zones humides & biodiversité</span>
+            <span class="tag">Conservation</span>
+          </div>
+
+          <div style="margin-top:16px" class="section-title">Compétences techniques</div>
+          <div class="list">
+            <div class="tag">Conception et conduite d'enquêtes écologiques</div>
+            <div class="tag">Analyse statistique (R, Python)</div>
+            <div class="tag">Télédétection & SIG</div>
+            <div class="tag">Rédaction scientifique & communication</div>
+          </div>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card projects">
+          <div class="section-title">Projets & travaux</div>
+
+          <div class="proj">
+            <h4>Étude des peuplements de pin d'Alep</h4>
+            <p>Inventaires, structure de peuplements, dynamique de régénération et recommandations pour gestion durable.</p>
+          </div>
+
+          <div class="proj">
+            <h4>Valorisation du retam</h4>
+            <p>Travaux sur le potentiel d'usage du retam (biomasse, amendement) et scénarios de valorisation locale.</p>
+          </div>
+
+          <div class="proj">
+            <h4>Phytosociométrie de la végétation steppique</h4>
+            <p>Classification des groupements végétaux, indices de diversité et cartographie des habitats steppiques.</p>
+          </div>
+
+          <div class="proj">
+            <h4>Biodiversité et zones humides</h4>
+            <p>Inventaires fauniques et floristiques, recommandations de conservation et valorisation éco‑touristique.</p>
+          </div>
+
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card">
+          <div class="section-title">Publications & communications</div>
+          <p class="small">(Liste représentative — remplacez ci‑
